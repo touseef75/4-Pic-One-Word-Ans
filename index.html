@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <br><br>
+        <div class="img1">
+        <img src="./images/word.png" alt="" id="img1" width="15%">
+        </div>
+        <br><br>
+        <h1>
+            4 Pics 1 Word answers
+        </h1>
+        <audio id="audio" autoplay>
+            <source src="./musics/mixkit-soothe-me-29.mp3" type="audio/mpeg" >
+        </audio>
+        <audio id="audio2">
+            <source src="./musics/mixkit-message-pop-alert-2354.mp3" type="audio/mpeg">
+        </audio>
+        <br>
+        <button class="buttons" id="start"> <a href="./about.html" style="text-decoration: none;color: white;"> Start </a></button>
+    </div>
+    <script>
+        let audio2 = document.getElementById("audio2")
+            let start = document.getElementById("start")
+            start.addEventListener("click", function () {
+                audio2.play();
+            })
+    </script>
+</body>
+</html>
