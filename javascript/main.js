@@ -12,8 +12,8 @@
         
         let num = 0;
         let h2 = document.getElementById("h2");
-        let h1 =document.querySelector("h1")
-        let but = document.getElementById("but")
+        let h1 =document.getElementById("h1")
+        let but = document.getElementById("but2")
         but.addEventListener("click",function(){
             let img = document.getElementById("img")
             let inpu = document.getElementById("inpu").value;
