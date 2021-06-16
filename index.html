@@ -25,15 +25,18 @@
             <source src="./musics/mixkit-message-pop-alert-2354.mp3" type="audio/mpeg">
         </audio>
         <br>
-        <button class="buttons" id="start"> <a href="./about.html" style="text-decoration: none;color: white;"> Start </a></button>
+        <input type="text" id="input" placeholder="Enter your name">
+        <button class="buttons" id="start">Start</button>
     </div>
     <script>
-        let audio2 = document.getElementById("audio2")
-            let start = document.getElementById("start")
-            start.addEventListener("click", function () {
-                audio2.play();
-            })
+        let but = document.getElementById("start");
+        but.onclick =  function(){
+            let input = document.getElementById("input").value;
+            localStorage.setItem('player',input)
+            alert("name")
+            window.location.replace('about.html')
+        }
     </script>
-    <script src="./javascript/main.js"></script>
+
 </body>
 </html>

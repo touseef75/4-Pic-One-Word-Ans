@@ -6,12 +6,13 @@
 ul{
     display: flex;
     justify-content: space-evenly;
-    background-color: #0096c7;
+    background-color: #023047;
     width: 100%;
     list-style-type: none;
     height: 6vh;
     color: white;
-    border-radius: 8px;
+    width: 100%;
+
 
 }
 li{
@@ -19,9 +20,9 @@ li{
     margin-right: 70px;
 }
 .cont{
-    width: 40%;
+    height: 100vh;
     margin: auto;
-    border-radius: 4px;
+    width: 100%;
 
 }
 .bottom-area{
@@ -33,8 +34,8 @@ li{
 }
 .container{
     background-color: black;
-    height: 70vh;
-    border-radius: 8px;
+    height: 100vh;
+    width: 100%;
 
 }
 #but1{
@@ -42,7 +43,7 @@ li{
     height: 40px;
     border: none;
     color: white;
-    background-color: #0096c7;
+    background-color: #023047;
     border-radius: 4px;
     box-shadow: inset 0 0 0 0 #f9e506;
     transition: ease-out 0.7s;
@@ -58,7 +59,7 @@ li{
     height: 40px;
     border: none;
     color: white;
-    background-color: #0096c7;
+    background-color: #023047;
     border-radius: 4px;
     box-shadow: inset 0 0 0 0 #f9e506;
     transition: ease-out 0.7s;
