@@ -30,3 +30,25 @@
     border-radius: 10px;
     font-size: 2rem;
 }
+.setting{
+    display: grid;
+    width: 100%;
+    justify-items: center;
+}
+#input{
+    height: 5vh;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    box-shadow: inset 0 0 0 0 #f9e506;
+    transition: ease-out 0.5s;
+}
+#input:hover{
+    box-shadow: inset 85px 0 0 0 rgb(75, 75, 69);
+    font-weight: bolder;
+
+}

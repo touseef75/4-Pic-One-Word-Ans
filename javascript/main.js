@@ -24,15 +24,20 @@
                 h1.innerHTML = data[num] ;
                 img.src = imgs[num];
                 h2.innerHTML = num2;
-            }if( h1.style.display = "block"){
+            }else{
+           let win = document.getElementById("win");
+           win.innerHTML = rel + "<br>" + "congrates you win";
+
+
+            }
+            if( h1.style.display = "block"){
                 h1.style.display = "none";
 
         }
         })
+        // timer logic
         let count = 0;
         let cou = document.getElementById("count");
-
-
         setInterval(run,1000)
         function run(){
 
@@ -40,6 +45,7 @@
             cou.innerHTML= count;
             console.log(count)
         }
+        // hint logic
         let but1 = document.getElementById("but1");
         but1.addEventListener("click",function(){
             if(num2 >= 3){
@@ -49,6 +55,7 @@
                 alert("you score must be greater then 3")
             )
         })
+        // get data from local storage
         let play = document.getElementById("play");
         let rel = localStorage.getItem('player');
         play.innerHTML += rel ;
