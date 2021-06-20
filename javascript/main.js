@@ -11,8 +11,10 @@
               "./images/joy.jpg",]
         
         let num = 0;
-        let num2 =0;
-        let h2 = document.getElementById("h2");
+        let sco = 0;
+        let end = 0;
+
+        let score = document.getElementById("score");
         let h1 =document.getElementById("h1")
         let but = document.getElementById("but2")
         but.addEventListener("click",function(){
@@ -20,19 +22,19 @@
             let inpu = document.getElementById("inpu").value;
             if(inpu == data[num]){
                 num++;
-                num2++;
+                sco++;
+                end = end + 1;
                 h1.innerHTML = data[num] ;
                 img.src = imgs[num];
-                h2.innerHTML = num2;
-            }else{
-           let win = document.getElementById("win");
-           win.innerHTML = rel + "<br>" + "congrates you win";
-
-
+                score.innerHTML = sco;
+                console.log(end)
+            }else if(end == 9){
+                alert("finish")
+             let win = document.getElementById("win");
+             win.innerHTML = rel + "<br>" + "congrates you win";
             }
-            if( h1.style.display = "block"){
+             if( h1.style.display = "block"){
                 h1.style.display = "none";
-
         }
         })
         // timer logic
@@ -40,17 +42,20 @@
         let cou = document.getElementById("count");
         setInterval(run,1000)
         function run(){
-
-            count = count + 1;
-            cou.innerHTML= count;
-            console.log(count)
+            if(end <= 9){
+                count = count + 1;
+                cou.innerHTML= count;
+            }else{
+                clearInterval(run)
+            }
+            
         }
         // hint logic
         let but1 = document.getElementById("but1");
         but1.addEventListener("click",function(){
-            if(num2 >= 3){
+            if(sco >= 3){
                 h1.style.display = "block";
-                num2 = num2 - 3;
+                sco = sco - 3;
             }else(
                 alert("you score must be greater then 3")
             )
