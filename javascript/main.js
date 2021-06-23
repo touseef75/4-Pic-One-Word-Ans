@@ -16,10 +16,12 @@
 
         let score = document.getElementById("score");
         let h1 =document.getElementById("h1")
-        let but = document.getElementById("but2")
+        let but = document.getElementById("but2");
+        let audio = document.getElementById("audio2");
         but.addEventListener("click",function(){
             let img = document.getElementById("img")
             let inpu = document.getElementById("inpu").value;
+            audio.play();
             if(inpu == data[num]){
                 num++;
                 sco++;
@@ -34,6 +36,10 @@
                 alert("finish")
              let win = document.getElementById("win");
              win.innerHTML = rel + "<br>" + "congrates you win"+ "<br>" + "Total score : " + sco + "<br>" + "Time Duration : " + count;
+            }else if(end == 11){
+                num = 11;
+                but.innerHTML = "play again";
+                window.location.replace("index.html");
             }
            
              if( h1.style.display = "block"){
@@ -56,6 +62,7 @@
         // hint logic
         let but1 = document.getElementById("but1");
         but1.addEventListener("click",function(){
+            audio.play();
             if(sco >= 3){
                 h1.style.display = "block";
                 sco = sco - 3;
