@@ -28,11 +28,14 @@
                 img.src = imgs[num];
                 score.innerHTML = sco;
                 console.log(end)
-            }else if(end == 9){
+            } else if(end == 9){
+             but.innerHTML = "Get result";
+            }else if(end == 10){
                 alert("finish")
              let win = document.getElementById("win");
-             win.innerHTML = rel + "<br>" + "congrates you win";
+             win.innerHTML = rel + "<br>" + "congrates you win"+ "<br>" + "Total score : " + sco + "<br>" + "Time Duration : " + count;
             }
+           
              if( h1.style.display = "block"){
                 h1.style.display = "none";
         }
